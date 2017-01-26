@@ -1,0 +1,276 @@
+
+locate_eye_brow.h,0
+
+write_movement_data_to_file.cpp,135
+int write_movement_data_to_file(char* filename,  CvPoint2D32f* movement_array, const int inp_dimn=4 )write_movement_data_to_file5,36
+
+lip_pt_detection.cpp,2371
+void find_lip_contour_pts(IplImage * img, CvSeq* contour, IplImage * inp_img_4_snake, IplImage * roi_img, CvSeq* largest_contour, int &contour_count, CvPoint &lip_upper_mid,CvPoint &lip_lower_mid,CvPoint &lip_left,CvPoint & lip_right );find_lip_contour_pts23,414
+void adaptive_threshold(IplImage* img,float& mean, IplImage* thres, int k_w);adaptive_threshold26,828
+void draw_lip_contour(IplImage* img, CvSeq* contours);draw_lip_contour28,907
+void local_mean_st_dev(IplImage* img, float global_mean, IplImage* thres_img, int k_w);local_mean_st_dev30,963
+void draw_circle(IplImage* img, CvPoint eyecentroid);draw_circle31,1051
+void detect_lip_corner(IplImage *img,CvRect &lip_rect, CvPoint& lip_mid_point,CvPoint &left_corner_feature,CvPoint &right_corner_feature );detect_lip_corner32,1105
+void sudo_hue(IplImage* hue_plane);sudo_hue34,1246
+int detect_lip_mid_pts(IplImage* src, int size_window, CvPoint& upper_corner_feature, CvPoint& lower_corner_feature,  CvPoint& origin);detect_lip_mid_pts36,1283
+void snake_algo(IplImage* img,CvSeq* contour, IplImage* snake_img, float &alpha, float &beta, float &gamma );snake_algo38,1490
+void locate_pts(int const contour_count, CvPoint* contour_array, CvPoint & rect_center, const float & constraint_height,  CvPoint &upper_mid,CvPoint &lower_mid, CvPoint &left,CvPoint &right, const bool &flag_constraint );locate_pts41,1602
+void  detect_lip(IplImage *img, IplImage *t_img, CvRect &lip_rect, CvSeq* lip_contour, CvPoint& upper_corner_feature, CvPoint& lower_corner_feature, CvPoint& left_corner_feature, CvPoint &right_corner_feature )detect_lip45,1858
+void find_lip_contour_pts(IplImage * img, CvSeq* contour, IplImage * inp_img_4_snake, IplImage * roi_img, CvSeq* largest_contour, int &contour_count, CvPoint &lip_upper_mid,CvPoint &lip_lower_mid,CvPoint &lip_left,CvPoint & lip_right )find_lip_contour_pts203,7446
+void draw_lip_contour(IplImage* img, CvSeq* contours)draw_lip_contour371,12549
+void draw_circle(IplImage* img, CvPoint eyecentroid)draw_circle427,13465
+int detect_lip_mid_pts(IplImage* src, int size_window, CvPoint& upper_corner_feature, CvPoint& lower_corner_feature,  CvPoint& origin)detect_lip_mid_pts436,13660
+void detect_lip_corner(IplImage *img, CvRect &lip_rect, CvPoint& lip_mid_point,CvPoint &left_corner_feature,CvPoint &right_corner_feature )detect_lip_corner573,17630
+
+sudo_hue_file_for_snake.cpp,63
+void sudo_hue_snake(IplImage* hue_plane)sudo_hue_snake19,308
+
+save_eye_brow_images.h,0
+
+eye_pseudo_hue_data.h,95
+ void eye_pseudo_hue_data( IplImage* inp_img, IplImage* hue_plane);eye_pseudo_hue_data16,270
+
+eye_brow_features_detection.cpp,231
+void detect_eyebrow_features(IplImage* img,CvRect* r_face, CvRect* eye1_r, CvRect* eye2_r, bool &is_first_frame,  CvPoint2D32f* left_eyebrow_ntl_dist_array,  CvPoint2D32f* right_eyebrow_ntl_dist_array)detect_eyebrow_features5,61
+
+lip_contour_for_snake.cpp,594
+void find_lip_contour_pts(IplImage * img, CvSeq* contour, IplImage * inp_img_4_snake, IplImage * roi_img, CvSeq* largest_contour, int &contour_count, CvPoint &lip_upper_mid,CvPoint &lip_lower_mid,CvPoint &lip_left,CvPoint & lip_right );find_lip_contour_pts16,273
+void adaptive_threshold(IplImage* img,float& mean, IplImage* thres, int k_w);adaptive_threshold19,690
+void draw_lip_contour(IplImage* img, CvSeq* contours);draw_lip_contour20,768
+void lip_contour(IplImage* sudo_h_plane, IplImage* t_img, IplImage*t_img_clone, IplImage * inp_img_4_snake,IplImage*lip_roi  )lip_contour22,925
+
+pseudo_hue_data.cpp,82
+void pseudo_hue_data(IplImage* inp_img,IplImage* hue_plane )pseudo_hue_data4,33
+
+eye_pts_detection.h,518
+#define _EYE_PTS_DETECTION_EYE_PTS_DETECTION2,27
+void invert_img(IplImage* img);invert_img23,473
+void locate_pts(int const contour_count, CvPoint* contour_array, CvPoint & rect_center, const float & constraint_height,  CvPoint &upper_mid,CvPoint &lower_mid, CvPoint &left,CvPoint &right, const bool &flag_constraint );locate_pts26,647
+void adaptive_threshold(IplImage* img,float& mean, IplImage* thres, int k_w);adaptive_threshold29,871
+void draw_circle(IplImage* img, CvPoint eyecentroid);draw_circle30,949
+
+pseudo_hue_data.h,88
+ void pseudo_hue_data( IplImage* inp_img, IplImage* hue_plane );pseudo_hue_data16,270
+
+calculate_neutral_eyebrow_movement_pts.cpp,290
+void calculate_neutral_eyebrow_movement_pts ( CvPoint2D32f* left_eyebrow_points_array, CvPoint2D32f* right_eyebrow_points_array, CvPoint2D32f* left_ntl_eye_brow_dist,CvPoint2D32f* right_ntl_eye_brow_dist, CvPoint &eye_cnt1, CvPoint &eye_cnt2 )calculate_neutral_eyebrow_movement_pts11,365
+
+locate_pts.cpp,237
+void locate_pts(int const contour_count, CvPoint* contour_array, CvPoint & rect_center, const float & constraint_height,  CvPoint &upper_mid,CvPoint &lower_mid, CvPoint &left,CvPoint &right, const bool &flag_constraint )locate_pts3,25
+
+sudo_hue_file.cpp,52
+void sudo_hue( IplImage* hue_plane)sudo_hue20,349
+
+eye_brow_features_detection.h,1638
+void locate_eye_brow(CvRect *face_rect, CvRect* eye_rect, CvRect& eye_brow);locate_eye_brow16,270
+void draw_circle(IplImage* img, CvPoint eyecentroid);draw_circle17,347
+void save_eye_brow_images(IplImage *input, CvRect& eye_brow1, CvRect eye_brow2);save_eye_brow_images18,401
+void extract_eye_brow_contour(IplImage *input, IplImage *contour_img, int& k, char* name, char* contour_name, char* brow_h_plane_name,  CvRect &eye_brow_r,CvPoint &brow_left, CvPoint &brow_upper_mid, CvPoint &brow_lower_mid,  CvPoint &brow_right);extract_eye_brow_contour19,482
+void gray_eyebrow_image_threshold(IplImage* input, IplImage *contour_img, int& k, char* name, char* contour_name);gray_eyebrow_image_threshold22,906
+void calculate_neutral_eyebrow_movement_pts ( CvPoint2D32f* left_eyebrow_points_array, CvPoint2D32f* right_eyebrow_points_array, CvPoint2D32f* left_ntl_eye_brow_dist,CvPoint2D32f* right_ntl_eye_brow_dist, CvPoint &eye_cnt1, CvPoint &eye_cnt2 );calculate_neutral_eyebrow_movement_pts24,1022
+void eyebrow_movement_fn (CvPoint2D32f* left_eye_brow_point, CvPoint2D32f* right_eye_brow_point, CvPoint &eye_cnt1, CvPoint &eye_cnt2, CvPoint2D32f* left_eyebrow_movement, CvPoint2D32f* right_eyebrow_movement,  CvPoint2D32f* left_ntl_eye_brow_dist, CvPoint2D32f* right_ntl_eye_brow_dist  );eyebrow_movement_fn26,1268
+int write_to_text_file(char* filename, CvPoint &eye_brow_left, CvPoint &eye_brow_upper_mid, CvPoint &eye_brow_lower_mid, CvPoint &eye_brow_right );write_to_text_file28,1560
+int write_movement_data_to_file(char* filename,  CvPoint2D32f* movement_array, const int inp_dimn=4 );write_movement_data_to_file31,1710
+
+adaptive_thresholding.cpp,214
+void adaptive_threshold(IplImage* img,float& mean, IplImage* thres, int k_w)adaptive_threshold7,41
+void local_mean_st_dev(IplImage* img, float global_mean, IplImage* thres_img, int k_w)local_mean_st_dev53,1053
+
+eye_pts_detection.cpp,97
+int eye_pts_detection (IplImage* img, CvRect* eye_r , double &proj_ratio)eye_pts_detection4,52
+
+extract_eye_brow_contour.h,765
+void sudo_hue(IplImage* inp_img, IplImage* hue_plane, char* brow_h_plane_name);sudo_hue16,288
+void adaptive_threshold(IplImage* img,float& mean, IplImage* thres, int k_w);adaptive_threshold17,368
+void snake_algo(IplImage* img,CvSeq* contour, IplImage* snake_img, float &alpha, float &beta, float &gamma ); snake_algo18,446
+void draw_contour(IplImage* img, CvSeq* contours);draw_contour20,665
+void locate_pts(int const contour_count, CvPoint* contour_array, CvPoint & rect_center, const float & constraint_height,  CvPoint &upper_mid,CvPoint &lower_mid, CvPoint &left,CvPoint &right, const bool &flag_constraint );locate_pts22,717
+void draw_circle(IplImage* img, CvPoint eyecentroid);draw_circle25,1081
+void invert_img(IplImage* img);invert_img26,1135
+
+segmented_data.h,75
+void segmented_data(int &count, IplImage* inp_img );segmented_data16,270
+
+locate_eye_brow.cpp,99
+void locate_eye_brow( CvRect *face_rect, CvRect* eye_rect, CvRect& eye_brow)locate_eye_brow6,147
+
+save_eye_brow_images.cpp,106
+void save_eye_brow_images(IplImage *input, CvRect& eye_brow1, CvRect eye_brow2)save_eye_brow_images4,71
+
+write_text_file.cpp,171
+int write_to_text_file(char* filename, CvPoint &eye_brow_left, CvPoint &eye_brow_upper_mid, CvPoint &eye_brow_lower_mid, CvPoint &eye_brow_right )write_to_text_file3,34
+
+test/largest_contour.cpp,132
+void find_largest_contour(IplImage* img, CvSeq** contour, CvSeq* largest_contour, CvMemStorage* storage)find_largest_contour7,146
+
+test/largest_contour.h,0
+
+eye_mouth_feature_detect.h,1948
+int detectEyes(IplImage *img, CvPoint2D32f *lip_point,  CvRect& r_i0, CvRect &r_i1, CvRect *face_rect, CvRect *r2, int extra_eye_width, int extra_eye_height, int lip_width_extra, CvRect& nose);detectEyes30,824
+void detectMouth(IplImage *img, CvRect *r2, CvRect& lip_r_out);detectMouth31,1018
+CvPoint get_centr(CvRect *r);get_centr32,1082
+void draw_circle(IplImage* img, CvPoint eyecentroid);//need to be declaireddraw_circle34,1113
+void save_eyes_images(IplImage *img, CvRect& r_i0, CvRect& r_i1, CvRect *face_rect, CvRect *eye1_rect, CvRect *eye2_rect);save_eyes_images35,1189
+void  detectEyes_pupil(IplImage *img,CvRect *pupl_cnt, CvPoint& eye_cnt, IplImage *t_img );detectEyes_pupil36,1312
+int CornerDetection(IplImage* src, int size_window, CvPoint& left_corner_feature,CvPoint& right_corner_feature,  CvPoint& origin);CornerDetection38,1405
+void find_contour_rect(IplImage * img, CvRect& obj_rect1, CvRect& obj_rect2);find_contour_rect39,1536
+void detect_nose(IplImage *img, CvRect *face_rect, CvRect& nose_rect, CvRect& nose_estm);detect_nose40,1614
+void locate_nostile(IplImage *img,CvRect& nose_rect, CvPoint& l_nostril, CvPoint& r_nostril);locate_nostile41,1704
+void detect_lip_corner(IplImage *img,CvRect& lip_rect, CvPoint& lip_mid_point, CvPoint &left_corner_feature,CvPoint &right_corner_feature);detect_lip_corner42,1798
+void draw_rectangle(IplImage* img, CvRect &rect, int r, int g, int b);draw_rectangle43,1938
+void detect_lip_all_points(IplImage* img, CvRect& lip_rect, CvPoint &lip_upper_mid,CvPoint &lip_lower_mid, CvPoint &left_lip_corner,CvPoint &right_lip_corner );detect_lip_all_points46,2121
+void save_image_roi (IplImage* input, CvRect& roi);save_image_roi47,2282
+void  detect_lip(IplImage *img, IplImage *t_img, CvRect &lip_rect, CvSeq* lip_contour, CvPoint& upper_corner_feature, CvPoint& lower_corner_feature, CvPoint& left_corner_feature, CvPoint &right_corner_feature );detect_lip49,2335
+
+removed_files_from_au_detection_code/detect_eye_brow_points.h,109
+void save_eye_brow_images(IplImage *input, CvRect& eye_brow1, CvRect eye_brow2);save_eye_brow_images15,251
+
+removed_files_from_au_detection_code/detect_eye_brow_points.cpp,201
+void detect_eye_brow_points(IplImage* src, CvRect& eye_brow_rect, CvPoint& origin, CvPoint &brow_upper_mid,CvPoint &brow_lower_mid, CvPoint &brow_left,CvPoint &brow_right)detect_eye_brow_points7,110
+
+snake_algo.cpp,127
+void snake_algo(IplImage* img,CvSeq* contour, IplImage* snake_img, float &alpha, float &beta, float &gamma )snake_algo16,329
+
+locate_pts.h,0
+
+makefile,391
+srcs =srcs2,16
+objs = $(srcs:.cpp=.o)objs37,990
+deps = $(srcs:.cpp=.d)deps38,1013
+srcDirs = srcDirs44,1174
+headers = headers51,1322
+exe = mainexe60,1554
+CXX = g++ CXX79,2151
+CXXFLAGS = -g3 -Wall -Werror -WCXXFLAGS86,2347
+CPPFLAGS = $(addprefix -I ,/usr/include/opencv)CPPFLAGS94,2607
+LOADLIBES = -lcv -lcxcore -lhighgui -lcvauxLOADLIBES101,2932
+LDLIBS = LDLIBS103,2977
+
+utils.h,412
+#define _CONSTANT__CONSTANT_2,19
+void show_image(IplImage* img,unsigned int const wait_ms=10 );show_image20,344
+double vertical_projection(IplImage* img);vertical_projection22,408
+double horizontal_projection (IplImage* img);horizontal_projection23,451
+void invert_img(IplImage* img);invert_img24,497
+int write_scalar_data_to_file(char* filename,  const double data );write_scalar_data_to_file25,529
+
+eye_mouth_feature_detect.cpp,1469
+int  detectEyes(IplImage *img,CvPoint2D32f *lip_point, CvRect& r_i0, CvRect& r_i1, CvRect *face_rect, CvRect *r2, int extra_eye_width, int extra_eye_height,  int lip_width_extra, CvRect& nose, int &chk_sign )detectEyes15,897
+CvPoint get_centr(CvRect *r)get_centr269,8231
+void detectMouth(IplImage *img, CvRect *r2, CvRect& lip_r_out)detectMouth291,8806
+void save_eyes_images(IplImage *img, CvRect& r_i0, CvRect& r_i1, CvRect *face_rect,CvRect *eye1_rect, CvRect *eye2_rect )save_eyes_images354,10879
+void  detectEyes_pupil(IplImage *img, CvPoint& eye_pupl_cnt, IplImage *t_img )detectEyes_pupil434,13415
+int CornerDetection(IplImage* src, int size_window, CvPoint& left_corner_feature,CvPoint& right_corner_feature,  CvPoint& origin){CornerDetection524,16730
+void find_contour_rect(IplImage * img, CvRect& obj_rect1, CvRect& obj_rect2)find_contour_rect686,22759
+void detect_nose(IplImage *img, CvRect *face_rect, CvRect& nose_rect, CvRect& nose_estm)detect_nose729,23846
+void locate_nostile(IplImage *img,CvRect& nose_rect, CvPoint& l_nostril, CvPoint& r_nostril)locate_nostile792,25978
+void draw_rectangle(IplImage* img, CvRect &rect, int r, int g, int b){draw_rectangle880,29159
+void detect_lip_all_points(IplImage* img, CvRect& lip_rect, CvPoint &lip_upper_mid,CvPoint &lip_lower_mid, CvPoint &left_lip_corner,CvPoint &right_lip_corner )detect_lip_all_points893,29527
+void save_image_roi (IplImage* input, CvRect& roi)save_image_roi960,31639
+
+hybrid_edge.cpp,106
+void hybrid_edge(IplImage * img_roi, IplImage * sudo_hue_img, IplImage * gradient_img)hybrid_edge22,412
+
+segmented_data.cpp,73
+void segmented_data(int &count, IplImage* inp_img )segmented_data6,112
+
+adaptive_thresholding.h,113
+void local_mean_st_dev(IplImage* img, float global_mean, IplImage* thres_img, int k_w);local_mean_st_dev18,372
+
+eyebrow_movement_fn.cpp,317
+void eyebrow_movement_fn (CvPoint2D32f* left_eye_brow_point, CvPoint2D32f* right_eye_brow_point, CvPoint &eye_cnt1, CvPoint &eye_cnt2, CvPoint2D32f* left_eyebrow_movement, CvPoint2D32f* right_eyebrow_movement,  CvPoint2D32f* left_ntl_eye_brow_dist, CvPoint2D32f* right_ntl_eye_brow_dist  )eyebrow_movement_fn11,322
+
+gray_eyebrow_image_threshold.cpp,148
+void gray_eyebrow_image_threshold(IplImage* input, IplImage *contour_img, int& k, char* name, char* contour_name)gray_eyebrow_image_threshold4,63
+
+calculate_neutral_lip_movement_pts.cpp,184
+void calculate_neutral_lip_movement_pts ( CvPoint2D32f* lip_points_array,  CvPoint2D32f* ntl_lip_dist, CvPoint &eye_cnt1, CvPoint &eye_cnt2 )calculate_neutral_lip_movement_pts11,365
+
+sudo_hue_for_eye_brow.cpp,94
+void sudo_hue(IplImage* inp_img, IplImage* hue_plane, char* brow_h_plane_name)sudo_hue6,126
+
+gray_eyebrow_image_threshold.h,154
+void adaptive_threshold(IplImage* img,float& mean, IplImage* thres, int k_w);adaptive_threshold17,289
+void invert_img(IplImage* img);invert_img18,367
+
+eye_pseudo_hue_data.cpp,90
+void eye_pseudo_hue_data(IplImage* inp_img,IplImage* hue_plane )eye_pseudo_hue_data4,37
+
+main.cpp,4124
+#define FACE_HEIGHT FACE_HEIGHT20,399
+#define FACE_WIDTH FACE_WIDTH21,423
+#define STAND_X_SCALE STAND_X_SCALE22,446
+#define STAND_Y_SCALE STAND_Y_SCALE23,474
+CvHaarClassifierCascade *cascade_e;cascade_e27,578
+CvHaarClassifierCascade *cascade_m;cascade_m28,615
+CvHaarClassifierCascade *cascade_n;cascade_n29,652
+CvMemStorage		*storage;storage30,689
+char filename1[]="eye1_projection_ratio.txt";filename132,716
+char filename2[]="eye2_projection_ratio.txt";filename233,763
+unsigned const wait_ms = 10; //external variable defined in global.hwait_ms35,812
+float x_scale=0;x_scale36,882
+float y_scale=0;y_scale37,900
+float scale=0.0;scale38,918
+int eye_pts_detection (IplImage* img, CvRect* eye_r , double &proj_ratio);eye_pts_detection41,1051
+int detectEyes(IplImage *img, CvPoint2D32f *lip_point,  CvRect& r_i0, CvRect &r_i1, CvRect *face_rect, CvRect *r2, int extra_eye_width, int extra_eye_height, int lip_width_extra, CvRect& nose, int &chk_sign);detectEyes42,1127
+void save_eyes_images(IplImage *img, CvRect& r_i0, CvRect& r_i1, CvRect *face_rect, CvRect *eye1_rect, CvRect *eye2_rect);save_eyes_images43,1337
+void  detectEyes_pupil(IplImage *img, CvPoint& eye_cnt, IplImage *t_img );detectEyes_pupil44,1461
+int CornerDetection(IplImage* src, int size_window, CvPoint& left_corner_feature,CvPoint& right_corner_feature,  CvPoint& origin);CornerDetection45,1537
+void detect_nose(IplImage *img, CvRect *face_rect, CvRect& nose_rect, CvRect& nose_estm);detect_nose46,1669
+void locate_nostile(IplImage *img,CvRect& nose_rect, CvPoint& l_nostril, CvPoint& r_nostril);locate_nostile47,1760
+void save_image_roi(IplImage* input, CvRect& roi);save_image_roi48,1855
+void detect_eyebrow_features(IplImage* img,CvRect* r_face, CvRect* eye1_r, CvRect* eye2_r, bool &is_first_frame,  CvPoint2D32f* left_eyebrow_ntl_dist_array,  CvPoint2D32f* right_eyebrow_ntl_dist_array);detect_eyebrow_features49,1907
+void  detect_lip(IplImage *img, IplImage *t_img,CvRect &lip_rect, CvSeq* lip_contour, CvPoint& upper_corner_feature, CvPoint& lower_corner_feature, CvPoint& left_corner_feature, CvPoint &right_corner_feature );detect_lip50,2111
+void draw_circle(IplImage* img, CvPoint eyecentroid);draw_circle51,2323
+void detect_smile(IplImage* frame, CvRect &lip_roi,const CvPoint &ntl_left_lip_corner, const CvPoint &ntl_right_lip_corner, CvPoint &left_lip_corner, CvPoint &right_lip_corner,  CvPoint &lip_upper_mid, CvPoint &lip_lower_mid,  bool &smile);detect_smile54,2510
+void rotate_at_theta_ang (IplImage* src, IplImage* dst, double &angle);rotate_at_theta_ang56,2754
+void lip_features( CvPoint &ntl_left_lip_corner, CvPoint &ntl_right_lip_corner,  CvPoint &ntl_upper_lip_mid_pt, CvPoint &ntl_lower_lip_mid_pt,CvPoint &left_lip_corner,  CvPoint &right_lip_corner,   CvPoint &lip_upper_mid,   CvPoint &lip_lower_mid);lip_features58,2829
+static const double pi = 3.14159265358979323846;pi62,3211
+string num2str(const unsigned& num)num2str67,3373
+inline static double square(int a)square75,3516
+inline static void allocateOnDemand( IplImage **img, CvSize size, int depth, int channels)allocateOnDemand80,3577
+double EuclideanDistance(CvPoint2D32f features1, CvPoint2D32f features2){EuclideanDistance91,3888
+void BinarizeROI(IplImage* temp, int threshold, CvPoint2D32f feature, int window_h_half, int window_w_half){BinarizeROI97,4401
+void Binarize(IplImage* temp, int threshold){Binarize116,5260
+void get_img_data(IplImage* img,uchar * data, int number_of_features,  CvPoint2D32f* frame1_features, float* frame1_features_data)get_img_data134,6031
+void DrawOutput(IplImage* frame1, CvPoint2D32f *frame1_features, CvPoint2D32f *frame2_features, CvScalar line_color, int CurrCount){DrawOutput152,6934
+void auto_features_init(IplImage* img,  CvPoint &left_lip_corner,  CvPoint &right_lip_corner,  CvPoint &lip_upper_mid, CvPoint &lip_lower_mid, CvRect &lip_r_out, CvRect* eye1_r, CvRect* eye2_r, CvRect* r_face, bool &is_first_frame,  CvPoint2D32f* left_eyebrow_ntl_dist_array,  CvPoint2D32f* right_eyebrow_ntl_dist_array)auto_features_init196,8587
+int main()main388,16126
+
+read_eyebrow_pts_from_text_file.cpp,197
+int read_eyebrow_pts_from_text_file(char* filename, CvPoint &eye_brow_left, CvPoint &eye_brow_upper_mid, CvPoint &eye_brow_lower_mid, CvPoint &eye_brow_right )read_eyebrow_pts_from_text_file3,34
+
+lip_features.cpp,266
+void lip_features( CvPoint &ntl_left_lip_corner, CvPoint &ntl_right_lip_corner,  CvPoint &ntl_upper_lip_mid_pt, CvPoint &ntl_lower_lip_mid_pt,CvPoint &left_lip_corner,  CvPoint &right_lip_corner,   CvPoint &lip_upper_mid,   CvPoint &lip_lower_mid)lip_features6,88
+
+utils.cpp,573
+void show_image(IplImage* img,unsigned int const wait_ms )show_image7,65
+void draw_contour(IplImage* img, CvSeq* contours)draw_contour25,298
+void largest_contour_detect(CvSeq* contour, CvSeq* largest_contour)// this function is not workinglargest_contour_detect61,681
+double vertical_projection(IplImage* img)vertical_projection98,1369
+double horizontal_projection(IplImage* img)horizontal_projection124,1992
+void invert_img(IplImage* img){invert_img152,2621
+int write_scalar_data_to_file(char* filename,  const double data )write_scalar_data_to_file189,3500
+
+lip_movement_fn.cpp,167
+void lip_movement_fn (CvPoint2D32f* lip_point, CvPoint &eye_cnt1, CvPoint &eye_cnt2, CvPoint2D32f* lip_movement,  CvPoint2D32f* ntl_lip_dist  )lip_movement_fn11,322
+
+global.h,36
+# define _GLOBAL_H__GLOBAL_H_2,20
+
+extract_eye_brow_contour.cpp,279
+void extract_eye_brow_contour(IplImage *input, IplImage *contour_img, int& k, char* name, char* contour_name, char* brow_h_plane_name,  CvRect &eye_brow_r,CvPoint &brow_left, CvPoint &brow_upper_mid, CvPoint &brow_lower_mid,  CvPoint &brow_right)extract_eye_brow_contour13,382
+
+detect_smile.cpp,865
+void detect_lip_corner(IplImage *img,CvRect& lip_rect, CvPoint& lip_mid_point, CvPoint &left_corner_feature,CvPoint &right_corner_feature);detect_lip_corner19,425
+void  detect_lip(IplImage *img, IplImage *t_img, CvRect &lip_rect, CvSeq* lip_contour, CvPoint& upper_corner_feature, CvPoint& lower_corner_feature, CvPoint& left_corner_feature, CvPoint &right_corner_feature );detect_lip20,565
+void draw_circle(IplImage* img, CvPoint eyecentroid);draw_circle21,777
+int write_movement_data_to_file(char* filename,  CvPoint2D32f* movement_array, const int inp_dimn=4);write_movement_data_to_file23,832
+void detect_smile(IplImage* frame, CvRect &lip_roi,const CvPoint &ntl_left_lip_corner, const CvPoint &ntl_right_lip_corner, CvPoint &left_lip_corner, CvPoint &right_lip_corner,  CvPoint &lip_upper_mid, CvPoint &lip_lower_mid,  bool &smile)detect_smile25,935
+
+lip_features.h,193
+#define _LIP_FEATURES_HEADER_LIP_FEATURES_HEADER4,106
+int write_movement_data_to_file(char* filename,  CvPoint2D32f* movement_array, const int inp_dimn=4);write_movement_data_to_file25,429
+
+rotate_at_theta_angle.cpp,95
+void rotate_at_theta_ang(IplImage* src, IplImage* dst, double &angle)rotate_at_theta_ang4,38
